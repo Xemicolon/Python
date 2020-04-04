@@ -1,5 +1,5 @@
-from xemicolon import myfunctions
-import random, string
+import random
+import string
 
 user_id = 0
 users = []
@@ -18,7 +18,8 @@ def create_user():
 
     def generate_password():
         letters = string.ascii_letters
-        generated_password = first_name[0:2] + last_name[-2:] + ''.join(random.sample(letters, 5))
+        generated_password = first_name[0:2] + \
+            last_name[-2:] + ''.join(random.sample(letters, 5))
         return generated_password
 
     random_password = generate_password()
@@ -28,10 +29,12 @@ def create_user():
         use_random_password = input(
             f'Your random generated password is {random_password}. Do you want use it? (Y/N): ').lower()
         if use_random_password == 'n':
-            use_random_password = input('Enter a password of your choice then: ')
+            use_random_password = input(
+                'Enter a password of your choice then: ')
             user_password = use_random_password
             while len(user_password) < 7:
-                user_password = input(f'Password must be 7 characters or longer: ')
+                user_password = input(
+                    f'Password must be 7 characters or longer: ')
             users.append(
                 {'First Name': first_name, 'Last Name': last_name, 'Email': email, 'Password': user_password})
             print(users)
@@ -49,7 +52,8 @@ def create_user():
 
 
 while True:
-    create_new_user = input('Do you want to create a new user? (Y/N): ').lower()
+    create_new_user = input(
+        'Do you want to create a new user? (Y/N): ').lower()
     if create_new_user == 'y':
         create_new_user
         user_id += 1
