@@ -6,6 +6,9 @@
 
 You are the IT officer for HNG tech and you are in charge of onboarding new employees. You need the employee details to set up an account for them on the company network. You are building a platform to collect their details and you have to do some basic validation.
 
+<br/>
+<br/>
+
 1. Collect details first name, last name, email.
 
 2. Generate random password for the user joining the first 2 letters of the first name and last 2 letters of the last name with a random string of length 5. This makes your password 9 letters long.
